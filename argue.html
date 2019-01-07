@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assinment 3 - 1</title>
+</head>
+
+  <body>
+    <div class="body-wrapper">
+      <button class = "button" type="button" id="btn1" onclick="changeText('btn1')">Click Me!</button>
+      <button class = "button" type="button" id="btn2" onclick="changeText('btn2')">Click Me!</button>
+      <p id="argue"></p>
+    </div>
+  </body>
+  <script>
+    function changeText(id){
+
+      if(id == 'btn1'){
+        document.getElementById("argue").innerHTML = "I'm right";
+      }
+      if(id == 'btn2'){
+        document.getElementById("argue").innerHTML = "No, I'm right!";
+      }
+    }
+  </script>
+</html>

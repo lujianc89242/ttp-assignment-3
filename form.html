@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinment 3 - 3&4</title>
+  </head>
+
+  <body>
+    <div class="body-wrapper">
+      <form onsubmit="return false">
+        Username:<br>
+        <input type="text" name="firstname" id="username"><br>
+        Email:<br>
+        <input type="text" name="lastname" id="email"><br>
+        Password:<br>
+        <input type="text" name="lastname" id="password"><br>
+        <input type="submit" value="Submit" onclick = "checkPwd()">
+        <h1 id="user_info"></h1>
+      </form>
+  </div>
+  </body>
+  <script>
+    function checkPwd(){
+      console.log("Form submited!")
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+      if(password != '12345678'){
+          alert("Password is incorect!");
+      }
+      else{
+        document.getElementById('user_info').innerHTML = "Username: " + username + "<br>"
+        + "Password: " + password + "<br>" + "Email: " + email;
+
+      }
+
+
+    }
+  </script>
+</html>

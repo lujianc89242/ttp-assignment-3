@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinment 3 - bonus</title>
+  </head>
+
+  <body>
+    <div class="body-wrapper">
+      <form onsubmit="return false">
+        Please enter the radius of the sphere:<br>
+        <input type="text" name="radius" id="radius"><br>
+        <input type="submit" value="Submit" onclick = "getVolume()">
+        <h1 id="result"></h1>
+      </form>
+    </div>
+  </body>
+  <script>
+    function getVolume(){
+
+      var radius = document.getElementById('radius').value;
+
+      if(radius == ''){
+          alert("radius can not be empty");
+      }
+      else{
+        var result = (4/3)*3.1415926*radius*radius*radius;
+        result = result.toFixed(2);
+        document.getElementById('result').innerHTML = "The volume of the sphere is " + result;
+
+      }
+
+
+    }
+  </script>
+</html>
